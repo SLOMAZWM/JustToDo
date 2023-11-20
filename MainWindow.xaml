@@ -1,0 +1,29 @@
+﻿<Window x:Class="JustToDo.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:JustToDo"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="250" Width="400">
+    <Grid Background="DarkGray">
+        
+        <!--Grid Def-->
+        
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        
+        <!--LABEL, BUTTON-->
+
+        <Label Content="Co chcesz zrobić?" Grid.Column="0" Grid.Row="0" FontFamily="Segoe UI" FontSize="36" FontWeight="Bold" HorizontalContentAlignment="Center" HorizontalAlignment="Center" Margin="10" Foreground="AliceBlue" />
+        <Button x:Name="ShowList" Content="Zobacz Listy" Grid.Column="0" Grid.Row="1" FontFamily="Times New Roman" FontSize="22" Width="150" Height="65" HorizontalAlignment="Left" Margin="25" Foreground="AliceBlue" Background="Gray" Click="ShowList_Click" />
+        <Button x:Name="Quit" Content="Wyjdź" Grid.Column="0" Grid.Row="1" FontFamily="Times New Roman" FontSize="22" Width="150" Height="65" HorizontalAlignment="Right" Margin="25" Foreground="AliceBlue" Background="DarkRed" Click="Quit_Click"/>
+        
+        
+    </Grid>
+</Window>

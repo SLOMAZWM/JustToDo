@@ -1,0 +1,38 @@
+﻿<Window x:Class="JustToDo.selectQuestW"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:JustToDo"
+        mc:Ignorable="d"
+        Title="Wybierz Zadanie do Edycji" Height="175" Width="350" Background="#582196">
+
+    <Window.Resources>
+        <Style TargetType="Label">
+            <Setter Property="Foreground" Value="#219696" />
+        </Style>
+    </Window.Resources>
+
+    <Grid>
+        <!--Grid DEF-->
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        
+        <!--LABEL, BUTTON, TEXTBOX-->
+
+        <Label Content="Wpisz nazwę zadania do edycji:" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" FontFamily="Times New Roman" FontSize="22" HorizontalAlignment="Center" Margin="5"/>
+        <TextBox x:Name="nQuest" Text="Tutaj wpisz nazwe zadania!" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" Height="25" Width="300" HorizontalAlignment="Center" VerticalAlignment="Top" GotFocus="TextBox_GotFocus" LostFocus="TextBox_LostFocus"/>
+        <Button x:Name="btnSelect" Content="Wybierz" Grid.Row="2" Grid.Column="0" Height="25" Width="75" FontWeight="Bold" VerticalAlignment="Top" Margin="50,20,0,0" Click="btnSelect_Click"/>
+        <Button x:Name="btnCancel" Content="Anuluj" Grid.Row="2" Grid.Column="1" Height="25" Width="75" FontWeight="Bold" VerticalAlignment="Top" Margin="0,20,0,0" Click="btnCancel_Click"/>
+
+    </Grid>
+</Window>
